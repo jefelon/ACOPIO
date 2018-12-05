@@ -46,6 +46,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnProductos = new System.Windows.Forms.Button();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtImporte = new System.Windows.Forms.TextBox();
+            this.dgvProductor = new System.Windows.Forms.DataGridView();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,10 +58,6 @@
             this.ColorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtImporte = new System.Windows.Forms.TextBox();
-            this.dgvProductor = new System.Windows.Forms.DataGridView();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -82,6 +82,8 @@
             // 
             // cmbCampania
             // 
+            this.cmbCampania.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCampania.Enabled = false;
             this.cmbCampania.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCampania.FormattingEnabled = true;
             this.cmbCampania.Location = new System.Drawing.Point(389, 25);
@@ -92,6 +94,7 @@
             // cmbCentroAcopio
             // 
             this.cmbCentroAcopio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCentroAcopio.Enabled = false;
             this.cmbCentroAcopio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCentroAcopio.FormattingEnabled = true;
             this.cmbCentroAcopio.Location = new System.Drawing.Point(145, 68);
@@ -162,6 +165,7 @@
             this.txtIdProductor.Name = "txtIdProductor";
             this.txtIdProductor.Size = new System.Drawing.Size(22, 22);
             this.txtIdProductor.TabIndex = 3;
+            this.txtIdProductor.Visible = false;
             // 
             // btnProductor
             // 
@@ -175,6 +179,7 @@
             // 
             // txtUnidadProductiva
             // 
+            this.txtUnidadProductiva.Enabled = false;
             this.txtUnidadProductiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUnidadProductiva.Location = new System.Drawing.Point(110, 63);
             this.txtUnidadProductiva.Name = "txtUnidadProductiva";
@@ -198,6 +203,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(265, 22);
             this.txtNombre.TabIndex = 1;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // label5
             // 
@@ -259,59 +265,6 @@
             this.dgvDatos.Size = new System.Drawing.Size(620, 199);
             this.dgvDatos.TabIndex = 2;
             // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 60;
-            // 
-            // PrecioUnitario
-            // 
-            this.PrecioUnitario.HeaderText = "Precio Unitario";
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 106;
-            // 
-            // Calidad
-            // 
-            this.Calidad.HeaderText = "Calidad";
-            this.Calidad.Name = "Calidad";
-            this.Calidad.ReadOnly = true;
-            this.Calidad.Width = 70;
-            // 
-            // Raza
-            // 
-            this.Raza.HeaderText = "Raza";
-            this.Raza.Name = "Raza";
-            this.Raza.ReadOnly = true;
-            this.Raza.Width = 70;
-            // 
-            // ColorId
-            // 
-            this.ColorId.HeaderText = "ColorId";
-            this.ColorId.Name = "ColorId";
-            this.ColorId.ReadOnly = true;
-            // 
-            // Color
-            // 
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            this.Color.ReadOnly = true;
-            this.Color.Width = 70;
-            // 
-            // Importe
-            // 
-            this.Importe.HeaderText = "Importe";
-            this.Importe.Name = "Importe";
-            this.Importe.ReadOnly = true;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -357,6 +310,60 @@
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 60;
+            // 
+            // PrecioUnitario
+            // 
+            this.PrecioUnitario.HeaderText = "Precio Unitario";
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 106;
+            // 
+            // Calidad
+            // 
+            this.Calidad.HeaderText = "Calidad";
+            this.Calidad.Name = "Calidad";
+            this.Calidad.ReadOnly = true;
+            this.Calidad.Width = 70;
+            // 
+            // Raza
+            // 
+            this.Raza.HeaderText = "Raza";
+            this.Raza.Name = "Raza";
+            this.Raza.ReadOnly = true;
+            this.Raza.Width = 70;
+            // 
+            // ColorId
+            // 
+            this.ColorId.HeaderText = "ColorId";
+            this.ColorId.Name = "ColorId";
+            this.ColorId.ReadOnly = true;
+            this.ColorId.Visible = false;
+            // 
+            // Color
+            // 
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
+            this.Color.ReadOnly = true;
+            this.Color.Width = 70;
+            // 
+            // Importe
+            // 
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
             // 
             // FrmAcopio
             // 

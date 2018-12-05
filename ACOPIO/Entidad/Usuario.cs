@@ -9,7 +9,13 @@ namespace ACOPIO.Entidad
     {
         private static int _id;
         private static string _nombreUsuario, _contrasena, _tipo;
-        private static int _centroAcopioId;
+        private static int _centroAcopioId, _campaniaId;
+
+        public static int CampaniaId
+        {
+            get { return Usuario._campaniaId; }
+            set { Usuario._campaniaId = value; }
+        }
 
         public static int Id
         {

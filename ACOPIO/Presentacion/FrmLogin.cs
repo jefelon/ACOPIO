@@ -39,6 +39,7 @@ namespace ACOPIO.Presentacion
                     Usuario.Contrasena = dt.Rows[0]["Contrasena"].ToString();
                     Usuario.Tipo = dt.Rows[0]["Tipo"].ToString();
                     Usuario.CentroAcopioId =Convert.ToInt32(cmbCentroAcopio.SelectedValue.ToString());
+                    Usuario.CampaniaId = Convert.ToInt32(cmbCampania.SelectedValue.ToString());
 
                     this.Hide();
                 }
@@ -56,7 +57,14 @@ namespace ACOPIO.Presentacion
             cmbCentroAcopio.ValueMember = "Id";
             cmbCentroAcopio.DisplayMember = "Nombre";
             cmbCentroAcopio.DataSource = dt2;
-            cmbCentroAcopio.SelectedValue = Usuario.CentroAcopioId;
+            cmbCentroAcopio.SelectedIndex = 0;
+
+            DataSet ds = FCampania.GetAll();
+            DataTable dt = ds.Tables[0];
+            cmbCampania.ValueMember = "Id";
+            cmbCampania.DisplayMember = "Nombre";
+            cmbCampania.DataSource = dt;
+            cmbCampania.SelectedIndex = 0;
         }
     }
 }

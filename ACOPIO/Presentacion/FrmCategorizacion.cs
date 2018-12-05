@@ -25,6 +25,7 @@ namespace ACOPIO.Presentacion
             cmbCampania.ValueMember = "Id";
             cmbCampania.DisplayMember = "Nombre";
             cmbCampania.DataSource = dt;
+            cmbCampania.SelectedValue = Usuario.CampaniaId;
 
             DataSet ds2 = FCentroAcopio.GetAll();
             DataTable dt2 = ds2.Tables[0];
@@ -32,6 +33,9 @@ namespace ACOPIO.Presentacion
             cmbCentroAcopio.DisplayMember = "Nombre";
             cmbCentroAcopio.DataSource = dt2;
             cmbCentroAcopio.SelectedValue = Usuario.CentroAcopioId;
+
+            dgvDatos.Columns["CategoriaId"].Visible=false;
+            dgvDatos.Columns["ColorId"].Visible=false;
         }
 
         private void btnProductos_Click(object sender, EventArgs e)

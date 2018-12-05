@@ -33,11 +33,6 @@
             this.dtpFecha = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             this.nroSaco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoriaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,6 +40,11 @@
             this.Raza = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColorId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtNroSacos = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
@@ -54,6 +54,7 @@
             // cmbCentroAcopio
             // 
             this.cmbCentroAcopio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCentroAcopio.Enabled = false;
             this.cmbCentroAcopio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCentroAcopio.FormattingEnabled = true;
             this.cmbCentroAcopio.Location = new System.Drawing.Point(145, 68);
@@ -63,6 +64,8 @@
             // 
             // cmbCampania
             // 
+            this.cmbCampania.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCampania.Enabled = false;
             this.cmbCampania.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCampania.FormattingEnabled = true;
             this.cmbCampania.Location = new System.Drawing.Point(389, 25);
@@ -93,6 +96,8 @@
             // 
             this.dgvDatos.AllowUserToAddRows = false;
             this.dgvDatos.AllowUserToDeleteRows = false;
+            this.dgvDatos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDatos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nroSaco,
@@ -107,6 +112,48 @@
             this.dgvDatos.ReadOnly = true;
             this.dgvDatos.Size = new System.Drawing.Size(620, 199);
             this.dgvDatos.TabIndex = 10;
+            // 
+            // nroSaco
+            // 
+            this.nroSaco.HeaderText = "N° Saco";
+            this.nroSaco.Name = "nroSaco";
+            this.nroSaco.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad Libras";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // CategoriaId
+            // 
+            this.CategoriaId.HeaderText = "CategoriaId";
+            this.CategoriaId.Name = "CategoriaId";
+            this.CategoriaId.ReadOnly = true;
+            // 
+            // Categoria
+            // 
+            this.Categoria.HeaderText = "Categoria";
+            this.Categoria.Name = "Categoria";
+            this.Categoria.ReadOnly = true;
+            // 
+            // Raza
+            // 
+            this.Raza.HeaderText = "Raza";
+            this.Raza.Name = "Raza";
+            this.Raza.ReadOnly = true;
+            // 
+            // ColorId
+            // 
+            this.ColorId.HeaderText = "ColorId";
+            this.ColorId.Name = "ColorId";
+            this.ColorId.ReadOnly = true;
+            // 
+            // Color
+            // 
+            this.Color.HeaderText = "Color";
+            this.Color.Name = "Color";
+            this.Color.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -164,51 +211,6 @@
             this.btnGuardar.Text = "GUARDAR";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // nroSaco
-            // 
-            this.nroSaco.HeaderText = "N° Saco";
-            this.nroSaco.Name = "nroSaco";
-            this.nroSaco.ReadOnly = true;
-            this.nroSaco.Width = 55;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad Libras";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // CategoriaId
-            // 
-            this.CategoriaId.HeaderText = "CategoriaId";
-            this.CategoriaId.Name = "CategoriaId";
-            this.CategoriaId.ReadOnly = true;
-            // 
-            // Categoria
-            // 
-            this.Categoria.HeaderText = "Categoria";
-            this.Categoria.Name = "Categoria";
-            this.Categoria.ReadOnly = true;
-            // 
-            // Raza
-            // 
-            this.Raza.HeaderText = "Raza";
-            this.Raza.Name = "Raza";
-            this.Raza.ReadOnly = true;
-            this.Raza.Width = 70;
-            // 
-            // ColorId
-            // 
-            this.ColorId.HeaderText = "ColorId";
-            this.ColorId.Name = "ColorId";
-            this.ColorId.ReadOnly = true;
-            // 
-            // Color
-            // 
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
-            this.Color.ReadOnly = true;
-            this.Color.Width = 70;
             // 
             // txtNroSacos
             // 

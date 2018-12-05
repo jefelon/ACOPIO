@@ -26,6 +26,7 @@ namespace ACOPIO.Presentacion
             cmbCampania.ValueMember = "Id";
             cmbCampania.DisplayMember = "Nombre";
             cmbCampania.DataSource = dt;
+            cmbCampania.SelectedValue = Usuario.CampaniaId;
 
             DataSet ds2 = FCentroAcopio.GetAll();
             DataTable dt2 = ds2.Tables[0];
@@ -51,7 +52,7 @@ namespace ACOPIO.Presentacion
                 dgvProductor.DataSource = null;
                 dgvProductor.Visible = false;
             }
-            if (txtDni.TextLength < 1)
+            if (txtDni.TextLength < 1 && txtNombre.TextLength < 1)
             {
                 dgvProductor.Visible = false;
             }
@@ -183,6 +184,11 @@ namespace ACOPIO.Presentacion
                 txtDni.Focus();
             }
             return reultado;
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            listarProductor();
         }
     }
 }

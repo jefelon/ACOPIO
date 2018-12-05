@@ -35,11 +35,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbCentroAcopio = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbCampania = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Location = new System.Drawing.Point(103, 193);
+            this.btnIngresar.Location = new System.Drawing.Point(104, 241);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(118, 38);
             this.btnIngresar.TabIndex = 7;
@@ -98,18 +100,40 @@
             // 
             // cmbCentroAcopio
             // 
+            this.cmbCentroAcopio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCentroAcopio.FormattingEnabled = true;
             this.cmbCentroAcopio.Location = new System.Drawing.Point(146, 131);
             this.cmbCentroAcopio.Name = "cmbCentroAcopio";
             this.cmbCentroAcopio.Size = new System.Drawing.Size(158, 21);
             this.cmbCentroAcopio.TabIndex = 8;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 171);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "CAMPAÑA:";
+            // 
+            // cmbCampania
+            // 
+            this.cmbCampania.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCampania.FormattingEnabled = true;
+            this.cmbCampania.Location = new System.Drawing.Point(146, 171);
+            this.cmbCampania.Name = "cmbCampania";
+            this.cmbCampania.Size = new System.Drawing.Size(158, 21);
+            this.cmbCampania.TabIndex = 8;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 262);
+            this.ClientSize = new System.Drawing.Size(328, 301);
+            this.Controls.Add(this.cmbCampania);
             this.Controls.Add(this.cmbCentroAcopio);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtContrasena);
@@ -133,5 +157,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbCentroAcopio;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbCampania;
     }
 }
