@@ -40,8 +40,9 @@
             this.moduloAcopioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.moduloCategorizaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteConsolidadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preciosOfertadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,7 +80,8 @@
             this.centrosDeAcopioToolStripMenuItem,
             this.productoresToolStripMenuItem,
             this.campañasToolStripMenuItem,
-            this.coloresToolStripMenuItem});
+            this.coloresToolStripMenuItem,
+            this.preciosOfertadosToolStripMenuItem});
             this.mantenimientoToolStripMenuItem.Name = "mantenimientoToolStripMenuItem";
             this.mantenimientoToolStripMenuItem.Size = new System.Drawing.Size(101, 20);
             this.mantenimientoToolStripMenuItem.Text = "Mantenimiento";
@@ -142,18 +144,25 @@
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
             // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
             // reporteConsolidadoToolStripMenuItem
             // 
             this.reporteConsolidadoToolStripMenuItem.Name = "reporteConsolidadoToolStripMenuItem";
             this.reporteConsolidadoToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
             this.reporteConsolidadoToolStripMenuItem.Text = "Reporte consolidado";
             this.reporteConsolidadoToolStripMenuItem.Click += new System.EventHandler(this.reporteConsolidadoToolStripMenuItem_Click);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // preciosOfertadosToolStripMenuItem
+            // 
+            this.preciosOfertadosToolStripMenuItem.Name = "preciosOfertadosToolStripMenuItem";
+            this.preciosOfertadosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.preciosOfertadosToolStripMenuItem.Text = "Precios Ofertados";
+            this.preciosOfertadosToolStripMenuItem.Click += new System.EventHandler(this.preciosOfertadosToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -187,6 +196,7 @@
         private System.Windows.Forms.ToolStripMenuItem moduloAcopioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem moduloCategorizaciónToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteConsolidadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem preciosOfertadosToolStripMenuItem;
     }
 }
 

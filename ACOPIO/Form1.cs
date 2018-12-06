@@ -52,5 +52,11 @@ namespace ACOPIO
             rep frm = new rep();
             frm.Show();
         }
+
+        private void preciosOfertadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPrecios frm = new FrmPrecios();
+            frm.Show();
+        }
     }
 }

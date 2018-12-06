@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Datos\FCategoriaColorPrecio.cs" />
     <Compile Include="Datos\FCategorizacionDetalle.cs" />
     <Compile Include="Datos\FAcopio.cs" />
     <Compile Include="Datos\FAcopioDetalle.cs" />
@@ -70,6 +71,7 @@
     <Compile Include="Entidad\AcopioDetalle.cs" />
     <Compile Include="Entidad\Campania.cs" />
     <Compile Include="Entidad\Categoria.cs" />
+    <Compile Include="Entidad\CategoriaColorPrecio.cs" />
     <Compile Include="Entidad\Categorizacion.cs" />
     <Compile Include="Entidad\CategorizacionDetalle.cs" />
     <Compile Include="Entidad\CentroAcopio.cs" />
@@ -140,11 +142,23 @@
     <Compile Include="Presentacion\FrmColores.Designer.cs">
       <DependentUpon>FrmColores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmEditarPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmEditarPrecios.Designer.cs">
+      <DependentUpon>FrmEditarPrecios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmPrecios.Designer.cs">
+      <DependentUpon>FrmPrecios.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FrmProductor.cs">
       <SubType>Form</SubType>
@@ -193,8 +207,14 @@
     <EmbeddedResource Include="Presentacion\FrmColores.resx">
       <DependentUpon>FrmColores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmEditarPrecios.resx">
+      <DependentUpon>FrmEditarPrecios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmPrecios.resx">
+      <DependentUpon>FrmPrecios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmProductor.resx">
       <DependentUpon>FrmProductor.cs</DependentUpon>

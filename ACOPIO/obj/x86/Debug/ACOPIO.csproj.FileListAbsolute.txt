@@ -22,3 +22,4 @@ D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\ACOPIO.Presentacion.FrmCategoriza
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\RdlCompile.cache
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\RdlCompile.compiled
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\ACOPIO.Presentacion.rep.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\ACOPIO.Presentacion.FrmPrecios.resources
