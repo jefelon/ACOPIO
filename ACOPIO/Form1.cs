@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using ACOPIO.Presentacion;
+using System.Data.SQLite;
+using System.IO;
 
 namespace ACOPIO
 {
@@ -57,6 +59,52 @@ namespace ACOPIO
         {
             FrmPrecios frm = new FrmPrecios();
             frm.Show();
+        }
+
+        private void crearCopiaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            FolderBrowserDialog browser = new FolderBrowserDialog();
+            string tempPath = "";
+
+            if (browser.ShowDialog() == DialogResult.OK)
+            {
+                tempPath = browser.SelectedPath;
+                tempPath += "\\";
+
+                using (var source = new SQLiteConnection("Data Source=acopio.db; Version=3;"))
+                using (var destination = new SQLiteConnection("Data Source="+tempPath+"acopio.db; Version=3;"))
+                {
+                    source.Open();
+                    destination.Open();
+                    source.BackupDatabase(destination, "main", "main", -1, null, 0);
+
+                    MessageBox.Show("Copia de seguridad creado correctamente","Copia OK");
+                }
+            }
+
+
+        }
+
+        private void restaurarBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog browser = new OpenFileDialog();
+            string tempPath = "";
+
+            if (browser.ShowDialog() == DialogResult.OK)
+            {
+                tempPath = browser.FileName;
+
+                using (var source = new SQLiteConnection("Data Source="+tempPath+"; Version=3;"))
+                using (var destination = new SQLiteConnection("Data Source=acopio.db; Version=3;"))
+                {
+                    source.Open();
+                    destination.Open();
+                    source.BackupDatabase(destination, "main", "main", -1, null, 0);
+
+                    MessageBox.Show("Copia de seguridad restaurado correctamente", "Copia OK");
+                }
+            }
         }
     }
 }

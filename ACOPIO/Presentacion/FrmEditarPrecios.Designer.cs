@@ -39,6 +39,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtRaza = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -55,13 +57,13 @@
             this.txtId.Enabled = false;
             this.txtId.Location = new System.Drawing.Point(83, 10);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(132, 20);
+            this.txtId.Size = new System.Drawing.Size(35, 20);
             this.txtId.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 57);
+            this.label2.Location = new System.Drawing.Point(22, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 0;
@@ -70,17 +72,18 @@
             // txtCategoria
             // 
             this.txtCategoria.Enabled = false;
-            this.txtCategoria.Location = new System.Drawing.Point(83, 54);
+            this.txtCategoria.Location = new System.Drawing.Point(83, 64);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(132, 20);
             this.txtCategoria.TabIndex = 1;
             // 
             // txtCategoriaId
             // 
-            this.txtCategoriaId.Location = new System.Drawing.Point(1, 54);
+            this.txtCategoriaId.Location = new System.Drawing.Point(1, 64);
             this.txtCategoriaId.Name = "txtCategoriaId";
             this.txtCategoriaId.Size = new System.Drawing.Size(15, 20);
             this.txtCategoriaId.TabIndex = 1;
+            this.txtCategoriaId.Visible = false;
             // 
             // txtColorId
             // 
@@ -88,6 +91,7 @@
             this.txtColorId.Name = "txtColorId";
             this.txtColorId.Size = new System.Drawing.Size(15, 20);
             this.txtColorId.TabIndex = 3;
+            this.txtColorId.Visible = false;
             // 
             // txtColor
             // 
@@ -130,6 +134,24 @@
             this.btnGuardar.TabIndex = 5;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtRaza
+            // 
+            this.txtRaza.Enabled = false;
+            this.txtRaza.Location = new System.Drawing.Point(83, 35);
+            this.txtRaza.Name = "txtRaza";
+            this.txtRaza.Size = new System.Drawing.Size(132, 20);
+            this.txtRaza.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 40);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Raza:";
             // 
             // FrmEditarPrecios
             // 
@@ -143,9 +165,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtCategoriaId);
             this.Controls.Add(this.txtCategoria);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtRaza);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Name = "FrmEditarPrecios";
@@ -168,5 +192,7 @@
         public System.Windows.Forms.TextBox txtColorId;
         public System.Windows.Forms.TextBox txtColor;
         public System.Windows.Forms.TextBox txtPrecio;
+        public System.Windows.Forms.TextBox txtRaza;
+        private System.Windows.Forms.Label label5;
     }
 }

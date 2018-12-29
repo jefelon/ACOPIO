@@ -17,7 +17,7 @@ namespace ACOPIO.Datos
                 {
 
                 };
-            return SQLiteHelper.ExecuteDataSet("SELECT tblCategoriaColorPrecio.Id, tblCategoria.Id AS CategoriaId, tblCategoria.Nombre AS Categoria, tblColor.Id AS ColorId, tblColor.Nombre AS Color, tblCategoriaColorPrecio.Precio FROM tblCategoriaColorPrecio INNER JOIN tblCategoria ON tblCategoria.Id = tblCategoriaColorPrecio.CategoriaId INNER JOIN tblColor ON tblCategoriaColorPrecio.ColorId = tblColor.Id order by tblCategoriaColorPrecio.Id; ", dbParams);
+            return SQLiteHelper.ExecuteDataSet("SELECT tblCategoriaColorPrecio.RazaId as Raza, tblCategoriaColorPrecio.Id, tblCategoria.Id AS CategoriaId, tblCategoria.Nombre AS Categoria, tblColor.Id AS ColorId, tblColor.Nombre AS Color, tblCategoriaColorPrecio.Precio FROM tblCategoriaColorPrecio INNER JOIN tblCategoria ON tblCategoria.Id = tblCategoriaColorPrecio.CategoriaId INNER JOIN tblColor ON tblCategoriaColorPrecio.ColorId = tblColor.Id order by tblCategoriaColorPrecio.Id; ", dbParams);
 
         }
         public static int Insertar(CategoriaColorPrecio categoriaColorPrecio)
@@ -44,6 +44,17 @@ namespace ACOPIO.Datos
                      SQLiteHelper.MakeParam("@RazaId", DbType.String, 0, categoriaColorPrecio.RazaId),
                 };
             return Convert.ToInt32(SQLiteHelper.ExecuteScalar("update tblCategoriaColorPrecio set Fecha=@Fecha,CentroAcopioId=@CentroAcopioId,CampaniaId=@CampaniaId,Productorid=@ProductorId   WHERE Id=@Id", dbParams));
+
+        }
+        public static int ActualizarPrecio(CategoriaColorPrecio categoriaColorPrecio)
+        {
+            SQLiteParameter[] dbParams = new SQLiteParameter[]
+                {
+                    SQLiteHelper.MakeParam("@Id", DbType.Int32, 0, categoriaColorPrecio.Id),
+                    SQLiteHelper.MakeParam("@Precio", DbType.Decimal, 0, categoriaColorPrecio.Precio),
+
+                };
+            return Convert.ToInt32(SQLiteHelper.ExecuteScalar("update tblCategoriaColorPrecio set Precio=@Precio   WHERE Id=@Id", dbParams));
 
         }
 
