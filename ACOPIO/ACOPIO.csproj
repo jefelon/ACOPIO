@@ -172,6 +172,18 @@
     <Compile Include="Presentacion\FrmProductores.Designer.cs">
       <DependentUpon>FrmProductores.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\FrmImpresionAcopio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmImpresionAcopio.Designer.cs">
+      <DependentUpon>FrmImpresionAcopio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmReporteFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmReporteFiltro.Designer.cs">
+      <DependentUpon>FrmReporteFiltro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\rep.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Acopio.rdlc" />
+    <EmbeddedResource Include="Presentacion\AcopioFiltro.rdlc" />
     <EmbeddedResource Include="Presentacion\FrmAcopio.resx">
       <DependentUpon>FrmAcopio.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +235,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmProductores.resx">
       <DependentUpon>FrmProductores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmImpresionAcopio.resx">
+      <DependentUpon>FrmImpresionAcopio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmReporteFiltro.resx">
+      <DependentUpon>FrmReporteFiltro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\rep.resx">
       <DependentUpon>rep.cs</DependentUpon>

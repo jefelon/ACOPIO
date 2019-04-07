@@ -32,6 +32,63 @@ FROM            tblCategorizacion INNER JOIN
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="AcopioTableAdapter" GeneratorDataComponentClassName="AcopioTableAdapter" Name="Acopio" UserDataComponentName="AcopioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="acopioConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        tblAcopio.Id  ,tblAcopio.Fecha, tblCentroAcopio.Nombre AS CentroAcopio, tblCentroAcopio.Ubicacion, tblCampania.Nombre AS Campania, tblProductor.Dni, tblProductor.Nombre AS Productor, tbLUnidadProductiva.Nombre AS UnidadProductiva
+FROM            tblAcopio INNER JOIN
+                         tblCampania ON tblAcopio.CampaniaId = tblCampania.Id INNER JOIN
+                         tblCentroAcopio ON tblAcopio.CentroAcopioId = tblCentroAcopio.Id INNER JOIN
+                         tblProductor ON tblAcopio.ProductorId = tblProductor.Id INNER JOIN
+                         tblUsuario ON tblAcopio.UsuarioId = tblUsuario.Id INNER JOIN
+                         tbLUnidadProductiva ON tblProductor.UnidadProductivaId = tbLUnidadProductiva.Id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="CentroAcopio" DataSetColumn="CentroAcopio" />
+              <Mapping SourceColumn="Ubicacion" DataSetColumn="Ubicacion" />
+              <Mapping SourceColumn="Campania" DataSetColumn="Campania" />
+              <Mapping SourceColumn="Dni" DataSetColumn="Dni" />
+              <Mapping SourceColumn="Productor" DataSetColumn="Productor" />
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="UnidadProductiva" DataSetColumn="UnidadProductiva" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DetalleAcopioTableAdapter" GeneratorDataComponentClassName="DetalleAcopioTableAdapter" Name="DetalleAcopio" UserDataComponentName="DetalleAcopioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="acopioConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        tblAcopioDetalle.Id, tblAcopioDetalle.AcopioId, tblAcopioDetalle.Cantidad, tblAcopioDetalle.Producto, tblAcopioDetalle.Calidad, tblAcopioDetalle.Raza, tblColor.Nombre AS Color, tblAcopioDetalle.ValorUnitario, 
+                         tblAcopioDetalle.ValorUnitario * tblAcopioDetalle.Cantidad AS Importe
+FROM            tblAcopioDetalle INNER JOIN
+                         tblAcopio ON tblAcopioDetalle.AcopioId = tblAcopio.Id INNER JOIN
+                         tblColor ON tblAcopioDetalle.ColorId = tblColor.Id</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="AcopioId" DataSetColumn="AcopioId" />
+              <Mapping SourceColumn="Cantidad" DataSetColumn="Cantidad" />
+              <Mapping SourceColumn="Producto" DataSetColumn="Producto" />
+              <Mapping SourceColumn="Calidad" DataSetColumn="Calidad" />
+              <Mapping SourceColumn="Raza" DataSetColumn="Raza" />
+              <Mapping SourceColumn="Color" DataSetColumn="Color" />
+              <Mapping SourceColumn="ValorUnitario" DataSetColumn="ValorUnitario" />
+              <Mapping SourceColumn="Importe" DataSetColumn="Importe" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -40,7 +97,7 @@ FROM            tblCategorizacion INNER JOIN
   <xs:element name="dsReporte" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReporte" msprop:Generator_UserDSName="dsReporte">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Categorizacion" msprop:Generator_TableClassName="CategorizacionDataTable" msprop:Generator_TableVarName="tableCategorizacion" msprop:Generator_RowChangedName="CategorizacionRowChanged" msprop:Generator_TablePropName="Categorizacion" msprop:Generator_RowDeletingName="CategorizacionRowDeleting" msprop:Generator_RowChangingName="CategorizacionRowChanging" msprop:Generator_RowEvHandlerName="CategorizacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CategorizacionRowDeleted" msprop:Generator_RowClassName="CategorizacionRow" msprop:Generator_UserTableName="Categorizacion" msprop:Generator_RowEvArgName="CategorizacionRowChangeEvent">
+        <xs:element name="Categorizacion" msprop:Generator_TableClassName="CategorizacionDataTable" msprop:Generator_TableVarName="tableCategorizacion" msprop:Generator_TablePropName="Categorizacion" msprop:Generator_RowDeletingName="CategorizacionRowDeleting" msprop:Generator_RowChangingName="CategorizacionRowChanging" msprop:Generator_RowEvHandlerName="CategorizacionRowChangeEventHandler" msprop:Generator_RowDeletedName="CategorizacionRowDeleted" msprop:Generator_UserTableName="Categorizacion" msprop:Generator_RowChangedName="CategorizacionRowChanged" msprop:Generator_RowEvArgName="CategorizacionRowChangeEvent" msprop:Generator_RowClassName="CategorizacionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Raza" msprop:Generator_ColumnVarNameInTable="columnRaza" msprop:Generator_ColumnPropNameInRow="Raza" msprop:Generator_ColumnPropNameInTable="RazaColumn" msprop:Generator_UserColumnName="Raza" minOccurs="0">
@@ -66,6 +123,101 @@ FROM            tblCategorizacion INNER JOIN
               </xs:element>
               <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:decimal" minOccurs="0" />
               <xs:element name="Precio" msprop:Generator_ColumnVarNameInTable="columnPrecio" msprop:Generator_ColumnPropNameInRow="Precio" msprop:Generator_ColumnPropNameInTable="PrecioColumn" msprop:Generator_UserColumnName="Precio" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Acopio" msprop:Generator_TableClassName="AcopioDataTable" msprop:Generator_TableVarName="tableAcopio" msprop:Generator_TablePropName="Acopio" msprop:Generator_RowDeletingName="AcopioRowDeleting" msprop:Generator_RowChangingName="AcopioRowChanging" msprop:Generator_RowEvHandlerName="AcopioRowChangeEventHandler" msprop:Generator_RowDeletedName="AcopioRowDeleted" msprop:Generator_UserTableName="Acopio" msprop:Generator_RowChangedName="AcopioRowChanged" msprop:Generator_RowEvArgName="AcopioRowChangeEvent" msprop:Generator_RowClassName="AcopioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CentroAcopio" msprop:Generator_ColumnVarNameInTable="columnCentroAcopio" msprop:Generator_ColumnPropNameInRow="CentroAcopio" msprop:Generator_ColumnPropNameInTable="CentroAcopioColumn" msprop:Generator_UserColumnName="CentroAcopio" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Ubicacion" msprop:Generator_ColumnVarNameInTable="columnUbicacion" msprop:Generator_ColumnPropNameInRow="Ubicacion" msprop:Generator_ColumnPropNameInTable="UbicacionColumn" msprop:Generator_UserColumnName="Ubicacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Campania" msprop:Generator_ColumnVarNameInTable="columnCampania" msprop:Generator_ColumnPropNameInRow="Campania" msprop:Generator_ColumnPropNameInTable="CampaniaColumn" msprop:Generator_UserColumnName="Campania" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dni" msprop:Generator_ColumnVarNameInTable="columnDni" msprop:Generator_ColumnPropNameInRow="Dni" msprop:Generator_ColumnPropNameInTable="DniColumn" msprop:Generator_UserColumnName="Dni" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Productor" msprop:Generator_ColumnVarNameInTable="columnProductor" msprop:Generator_ColumnPropNameInRow="Productor" msprop:Generator_ColumnPropNameInTable="ProductorColumn" msprop:Generator_UserColumnName="Productor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="UnidadProductiva" msprop:Generator_ColumnVarNameInTable="columnUnidadProductiva" msprop:Generator_ColumnPropNameInRow="UnidadProductiva" msprop:Generator_ColumnPropNameInTable="UnidadProductivaColumn" msprop:Generator_UserColumnName="UnidadProductiva" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DetalleAcopio" msprop:Generator_TableClassName="DetalleAcopioDataTable" msprop:Generator_TableVarName="tableDetalleAcopio" msprop:Generator_TablePropName="DetalleAcopio" msprop:Generator_RowDeletingName="DetalleAcopioRowDeleting" msprop:Generator_RowChangingName="DetalleAcopioRowChanging" msprop:Generator_RowEvHandlerName="DetalleAcopioRowChangeEventHandler" msprop:Generator_RowDeletedName="DetalleAcopioRowDeleted" msprop:Generator_UserTableName="DetalleAcopio" msprop:Generator_RowChangedName="DetalleAcopioRowChanged" msprop:Generator_RowEvArgName="DetalleAcopioRowChangeEvent" msprop:Generator_RowClassName="DetalleAcopioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_UserColumnName="Id" type="xs:long" />
+              <xs:element name="AcopioId" msprop:Generator_ColumnVarNameInTable="columnAcopioId" msprop:Generator_ColumnPropNameInRow="AcopioId" msprop:Generator_ColumnPropNameInTable="AcopioIdColumn" msprop:Generator_UserColumnName="AcopioId" type="xs:long" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Producto" msprop:Generator_ColumnVarNameInTable="columnProducto" msprop:Generator_ColumnPropNameInRow="Producto" msprop:Generator_ColumnPropNameInTable="ProductoColumn" msprop:Generator_UserColumnName="Producto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Calidad" msprop:Generator_ColumnVarNameInTable="columnCalidad" msprop:Generator_ColumnPropNameInRow="Calidad" msprop:Generator_ColumnPropNameInTable="CalidadColumn" msprop:Generator_UserColumnName="Calidad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Raza" msprop:Generator_ColumnVarNameInTable="columnRaza" msprop:Generator_ColumnPropNameInRow="Raza" msprop:Generator_ColumnPropNameInTable="RazaColumn" msprop:Generator_UserColumnName="Raza" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Color" msprop:Generator_ColumnVarNameInTable="columnColor" msprop:Generator_ColumnPropNameInRow="Color" msprop:Generator_ColumnPropNameInTable="ColorColumn" msprop:Generator_UserColumnName="Color" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ValorUnitario" msprop:Generator_ColumnVarNameInTable="columnValorUnitario" msprop:Generator_ColumnPropNameInRow="ValorUnitario" msprop:Generator_ColumnPropNameInTable="ValorUnitarioColumn" msprop:Generator_UserColumnName="ValorUnitario" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Importe" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:anyType" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -24,3 +24,5 @@ D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\RdlCompile.compiled
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\ACOPIO.Presentacion.rep.resources
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\ACOPIO.Presentacion.FrmPrecios.resources
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\ACOPIO.Presentacion.FrmEditarPrecios.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\ACOPIO.Presentacion.FrmImpresionAcopio.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Debug\ACOPIO.Presentacion.FrmReporteFiltro.resources

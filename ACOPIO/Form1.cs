@@ -106,5 +106,17 @@ namespace ACOPIO
                 }
             }
         }
+
+        private void reimpresiónDeReporteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmImpresionAcopio frm = new FrmImpresionAcopio();
+            frm.Show();
+        }
+
+        private void reporteConFiltrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReporteFiltro frm = new FrmReporteFiltro();
+            frm.Show();
+        }
     }
 }

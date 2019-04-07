@@ -153,6 +153,10 @@ namespace ACOPIO.Presentacion
 
                 MessageBox.Show("Ingreso Guardado.","Guardando...");
 
+                FrmImpresionAcopio frm = new FrmImpresionAcopio();
+                frm.AcopioId = returId;
+                frm.ShowDialog();
+
                 FrmAcopio_Load(null, null);
 
                     dgvDatos.Rows.Clear();
