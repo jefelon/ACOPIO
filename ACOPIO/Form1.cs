@@ -110,12 +110,19 @@ namespace ACOPIO
         private void reimpresiónDeReporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmImpresionAcopio frm = new FrmImpresionAcopio();
+            frm.AcopioId = 5;
             frm.Show();
         }
 
-        private void reporteConFiltrosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void reporteGeneralTodosLosAcopiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmReporteFiltro frm = new FrmReporteFiltro();
+            RptAcopioGeneral frm = new RptAcopioGeneral();
+            frm.Show();
+        }
+
+        private void reporteAcopioPorProvedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RptAcopioFechasProveedor frm = new RptAcopioFechasProveedor();
             frm.Show();
         }
     }

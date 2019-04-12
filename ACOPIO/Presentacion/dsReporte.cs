@@ -11,3 +11,11 @@ namespace ACOPIO.Presentacion.dsReporteTableAdapters {
     public partial class CategorizacionTableAdapter {
     }
 }
+
+namespace ACOPIO.Presentacion.dsReporteTableAdapters
+{
+    
+    
+    public partial class RptAcopiosTableAdapter {
+    }
+}

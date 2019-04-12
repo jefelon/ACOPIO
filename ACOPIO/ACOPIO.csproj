@@ -178,17 +178,23 @@
     <Compile Include="Presentacion\FrmImpresionAcopio.Designer.cs">
       <DependentUpon>FrmImpresionAcopio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\FrmReporteFiltro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\FrmReporteFiltro.Designer.cs">
-      <DependentUpon>FrmReporteFiltro.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\rep.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\rep.Designer.cs">
       <DependentUpon>rep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\RptAcopioFechasProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\RptAcopioFechasProveedor.Designer.cs">
+      <DependentUpon>RptAcopioFechasProveedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\RptAcopioGeneral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\RptAcopioGeneral.Designer.cs">
+      <DependentUpon>RptAcopioGeneral.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -197,6 +203,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Acopio.rdlc" />
     <EmbeddedResource Include="Presentacion\AcopioFiltro.rdlc" />
+    <EmbeddedResource Include="Presentacion\RtpAcopioFechasPorProductor.rdlc" />
     <EmbeddedResource Include="Presentacion\FrmAcopio.resx">
       <DependentUpon>FrmAcopio.cs</DependentUpon>
     </EmbeddedResource>
@@ -239,13 +246,17 @@
     <EmbeddedResource Include="Presentacion\FrmImpresionAcopio.resx">
       <DependentUpon>FrmImpresionAcopio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\FrmReporteFiltro.resx">
-      <DependentUpon>FrmReporteFiltro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\rep.resx">
       <DependentUpon>rep.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Report1.rdlc" />
+    <EmbeddedResource Include="Presentacion\RptAcopioFechasProveedor.resx">
+      <DependentUpon>RptAcopioFechasProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\RptAcopioGeneral.resx">
+      <DependentUpon>RptAcopioGeneral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\RtpAcopioGeneral.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -43,11 +43,12 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteConsolidadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reimpresiónDeReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteConFiltrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteGeneralTodosLosAcopiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearCopiaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurarBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteAcopioPorProvedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,7 +155,8 @@
             this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.reporteConsolidadoToolStripMenuItem,
             this.reimpresiónDeReporteToolStripMenuItem,
-            this.reporteConFiltrosToolStripMenuItem});
+            this.reporteGeneralTodosLosAcopiosToolStripMenuItem,
+            this.reporteAcopioPorProvedorToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "Reportes";
@@ -162,23 +164,23 @@
             // reporteConsolidadoToolStripMenuItem
             // 
             this.reporteConsolidadoToolStripMenuItem.Name = "reporteConsolidadoToolStripMenuItem";
-            this.reporteConsolidadoToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.reporteConsolidadoToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
             this.reporteConsolidadoToolStripMenuItem.Text = "Reporte consolidado";
             this.reporteConsolidadoToolStripMenuItem.Click += new System.EventHandler(this.reporteConsolidadoToolStripMenuItem_Click);
             // 
             // reimpresiónDeReporteToolStripMenuItem
             // 
             this.reimpresiónDeReporteToolStripMenuItem.Name = "reimpresiónDeReporteToolStripMenuItem";
-            this.reimpresiónDeReporteToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
+            this.reimpresiónDeReporteToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
             this.reimpresiónDeReporteToolStripMenuItem.Text = "Reimpresión de reporte";
             this.reimpresiónDeReporteToolStripMenuItem.Click += new System.EventHandler(this.reimpresiónDeReporteToolStripMenuItem_Click);
             // 
-            // reporteConFiltrosToolStripMenuItem
+            // reporteGeneralTodosLosAcopiosToolStripMenuItem
             // 
-            this.reporteConFiltrosToolStripMenuItem.Name = "reporteConFiltrosToolStripMenuItem";
-            this.reporteConFiltrosToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
-            this.reporteConFiltrosToolStripMenuItem.Text = "Reporte con filtros";
-            this.reporteConFiltrosToolStripMenuItem.Click += new System.EventHandler(this.reporteConFiltrosToolStripMenuItem_Click);
+            this.reporteGeneralTodosLosAcopiosToolStripMenuItem.Name = "reporteGeneralTodosLosAcopiosToolStripMenuItem";
+            this.reporteGeneralTodosLosAcopiosToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.reporteGeneralTodosLosAcopiosToolStripMenuItem.Text = "Reporte general(Todos los acopios)";
+            this.reporteGeneralTodosLosAcopiosToolStripMenuItem.Click += new System.EventHandler(this.reporteGeneralTodosLosAcopiosToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -208,6 +210,13 @@
             this.restaurarBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
             this.restaurarBaseDeDatosToolStripMenuItem.Text = "Restaurar Base de datos";
             this.restaurarBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.restaurarBaseDeDatosToolStripMenuItem_Click);
+            // 
+            // reporteAcopioPorProvedorToolStripMenuItem
+            // 
+            this.reporteAcopioPorProvedorToolStripMenuItem.Name = "reporteAcopioPorProvedorToolStripMenuItem";
+            this.reporteAcopioPorProvedorToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.reporteAcopioPorProvedorToolStripMenuItem.Text = "Reporte Acopio Por Provedor";
+            this.reporteAcopioPorProvedorToolStripMenuItem.Click += new System.EventHandler(this.reporteAcopioPorProvedorToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -248,7 +257,8 @@
         private System.Windows.Forms.ToolStripMenuItem crearCopiaBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem restaurarBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reimpresiónDeReporteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem reporteConFiltrosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteGeneralTodosLosAcopiosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteAcopioPorProvedorToolStripMenuItem;
     }
 }
 
