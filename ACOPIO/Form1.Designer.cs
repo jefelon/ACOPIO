@@ -44,11 +44,16 @@
             this.reporteConsolidadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reimpresiónDeReporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reporteGeneralTodosLosAcopiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteAcopioPorProvedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.seguridadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearCopiaBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.restaurarBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteAcopioPorProvedorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aparienciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.unidadProductivaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,8 +64,9 @@
             this.mantenimientoToolStripMenuItem,
             this.operacionesToolStripMenuItem,
             this.reportesToolStripMenuItem,
-            this.ayudaToolStripMenuItem,
-            this.seguridadToolStripMenuItem});
+            this.seguridadToolStripMenuItem,
+            this.opcionesToolStripMenuItem,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(736, 24);
@@ -80,10 +86,12 @@
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // mantenimientoToolStripMenuItem
             // 
             this.mantenimientoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.unidadProductivaToolStripMenuItem,
             this.centrosDeAcopioToolStripMenuItem,
             this.productoresToolStripMenuItem,
             this.campañasToolStripMenuItem,
@@ -112,6 +120,7 @@
             this.campañasToolStripMenuItem.Name = "campañasToolStripMenuItem";
             this.campañasToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.campañasToolStripMenuItem.Text = "Campañas";
+            this.campañasToolStripMenuItem.Click += new System.EventHandler(this.campañasToolStripMenuItem_Click);
             // 
             // coloresToolStripMenuItem
             // 
@@ -164,35 +173,37 @@
             // reporteConsolidadoToolStripMenuItem
             // 
             this.reporteConsolidadoToolStripMenuItem.Name = "reporteConsolidadoToolStripMenuItem";
-            this.reporteConsolidadoToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.reporteConsolidadoToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
             this.reporteConsolidadoToolStripMenuItem.Text = "Reporte consolidado";
             this.reporteConsolidadoToolStripMenuItem.Click += new System.EventHandler(this.reporteConsolidadoToolStripMenuItem_Click);
             // 
             // reimpresiónDeReporteToolStripMenuItem
             // 
             this.reimpresiónDeReporteToolStripMenuItem.Name = "reimpresiónDeReporteToolStripMenuItem";
-            this.reimpresiónDeReporteToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.reimpresiónDeReporteToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
             this.reimpresiónDeReporteToolStripMenuItem.Text = "Reimpresión de reporte";
             this.reimpresiónDeReporteToolStripMenuItem.Click += new System.EventHandler(this.reimpresiónDeReporteToolStripMenuItem_Click);
             // 
             // reporteGeneralTodosLosAcopiosToolStripMenuItem
             // 
             this.reporteGeneralTodosLosAcopiosToolStripMenuItem.Name = "reporteGeneralTodosLosAcopiosToolStripMenuItem";
-            this.reporteGeneralTodosLosAcopiosToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
+            this.reporteGeneralTodosLosAcopiosToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
             this.reporteGeneralTodosLosAcopiosToolStripMenuItem.Text = "Reporte general(Todos los acopios)";
             this.reporteGeneralTodosLosAcopiosToolStripMenuItem.Click += new System.EventHandler(this.reporteGeneralTodosLosAcopiosToolStripMenuItem_Click);
             // 
-            // ayudaToolStripMenuItem
+            // reporteAcopioPorProvedorToolStripMenuItem
             // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            this.reporteAcopioPorProvedorToolStripMenuItem.Name = "reporteAcopioPorProvedorToolStripMenuItem";
+            this.reporteAcopioPorProvedorToolStripMenuItem.Size = new System.Drawing.Size(303, 22);
+            this.reporteAcopioPorProvedorToolStripMenuItem.Text = "Reporte Acopio (Por Provedor entre fechas)";
+            this.reporteAcopioPorProvedorToolStripMenuItem.Click += new System.EventHandler(this.reporteAcopioPorProvedorToolStripMenuItem_Click);
             // 
             // seguridadToolStripMenuItem
             // 
             this.seguridadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.crearCopiaBaseDeDatosToolStripMenuItem,
-            this.restaurarBaseDeDatosToolStripMenuItem});
+            this.restaurarBaseDeDatosToolStripMenuItem,
+            this.usuariosToolStripMenuItem});
             this.seguridadToolStripMenuItem.Name = "seguridadToolStripMenuItem";
             this.seguridadToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.seguridadToolStripMenuItem.Text = "Seguridad";
@@ -200,23 +211,60 @@
             // crearCopiaBaseDeDatosToolStripMenuItem
             // 
             this.crearCopiaBaseDeDatosToolStripMenuItem.Name = "crearCopiaBaseDeDatosToolStripMenuItem";
-            this.crearCopiaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.crearCopiaBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
             this.crearCopiaBaseDeDatosToolStripMenuItem.Text = "Crear Copia base de datos";
             this.crearCopiaBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.crearCopiaBaseDeDatosToolStripMenuItem_Click);
             // 
             // restaurarBaseDeDatosToolStripMenuItem
             // 
             this.restaurarBaseDeDatosToolStripMenuItem.Name = "restaurarBaseDeDatosToolStripMenuItem";
-            this.restaurarBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(211, 22);
+            this.restaurarBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
             this.restaurarBaseDeDatosToolStripMenuItem.Text = "Restaurar Base de datos";
             this.restaurarBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.restaurarBaseDeDatosToolStripMenuItem_Click);
             // 
-            // reporteAcopioPorProvedorToolStripMenuItem
+            // usuariosToolStripMenuItem
             // 
-            this.reporteAcopioPorProvedorToolStripMenuItem.Name = "reporteAcopioPorProvedorToolStripMenuItem";
-            this.reporteAcopioPorProvedorToolStripMenuItem.Size = new System.Drawing.Size(259, 22);
-            this.reporteAcopioPorProvedorToolStripMenuItem.Text = "Reporte Acopio Por Provedor";
-            this.reporteAcopioPorProvedorToolStripMenuItem.Click += new System.EventHandler(this.reporteAcopioPorProvedorToolStripMenuItem_Click);
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(293, 22);
+            this.usuariosToolStripMenuItem.Text = "Mis datos (Cambiar usuario y contraseña)";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // opcionesToolStripMenuItem
+            // 
+            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aparienciaToolStripMenuItem});
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.opcionesToolStripMenuItem.Text = "Opciones";
+            // 
+            // aparienciaToolStripMenuItem
+            // 
+            this.aparienciaToolStripMenuItem.Name = "aparienciaToolStripMenuItem";
+            this.aparienciaToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.aparienciaToolStripMenuItem.Text = "Apariencia";
+            this.aparienciaToolStripMenuItem.Click += new System.EventHandler(this.aparienciaToolStripMenuItem_Click);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acercaDelSistemaToolStripMenuItem});
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // acercaDelSistemaToolStripMenuItem
+            // 
+            this.acercaDelSistemaToolStripMenuItem.Name = "acercaDelSistemaToolStripMenuItem";
+            this.acercaDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.acercaDelSistemaToolStripMenuItem.Text = "Acerca del sistema";
+            this.acercaDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.acercaDelSistemaToolStripMenuItem_Click);
+            // 
+            // unidadProductivaToolStripMenuItem
+            // 
+            this.unidadProductivaToolStripMenuItem.Name = "unidadProductivaToolStripMenuItem";
+            this.unidadProductivaToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.unidadProductivaToolStripMenuItem.Text = "Unidad Productiva";
+            this.unidadProductivaToolStripMenuItem.Click += new System.EventHandler(this.unidadProductivaToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -228,7 +276,9 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "SISTEMA DE ACOPIO DE FIBRA";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -259,6 +309,11 @@
         private System.Windows.Forms.ToolStripMenuItem reimpresiónDeReporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteGeneralTodosLosAcopiosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteAcopioPorProvedorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aparienciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDelSistemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem unidadProductivaToolStripMenuItem;
     }
 }
 

@@ -1,4 +1,3 @@
-D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.csprojResolveAssemblyReference.cache
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Form1.resources
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmColor.resources
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Properties.Resources.resources
@@ -17,3 +16,38 @@ D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmProducto
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmProductores.resources
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmAcopio.resources
 D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmAgregarItem.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.FrmAcerca.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmAcopioListado.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmApariencia.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmCampania.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmCampanias.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmUsuario.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmUsuarios.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmAgregarItemCat.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmCategorizacion.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmEditarPrecios.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmLogin.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmPrecios.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmImpresionAcopio.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.rep.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.RptAcopioFechasProveedor.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.RptAcopioGeneral.resources
+D:\SISTEMAS\ACOPIO - copia\ACOPIO\ACOPIO\bin\Release\ACOPIO.exe.config
+D:\SISTEMAS\ACOPIO - copia\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.csproj.ResolveComReference.cache
+D:\SISTEMAS\ACOPIO - copia\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.exe
+D:\SISTEMAS\ACOPIO - copia\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.pdb
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmUnidadProductiva.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.Presentacion.FrmUnidadProductivas.resources
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\EntityFramework.dll
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\EntityFramework.SqlServer.dll
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\Microsoft.ReportViewer.Common.dll
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\Microsoft.ReportViewer.WinForms.dll
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\System.Data.SQLite.EF6.dll
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\System.Data.SQLite.Linq.dll
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\EntityFramework.xml
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\EntityFramework.SqlServer.xml
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\System.Data.SQLite.xml
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\System.Data.SQLite.dll.config
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.csproj.CoreCompileInputs.cache
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\obj\x86\Release\ACOPIO.csproj.CopyComplete
+D:\SISTEMAS\ACOPIO\ACOPIO\ACOPIO\bin\Release\sqlite3.dll

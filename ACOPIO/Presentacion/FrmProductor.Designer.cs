@@ -74,7 +74,7 @@
             this.txtNombre.Location = new System.Drawing.Point(91, 72);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(379, 26);
-            this.txtNombre.TabIndex = 6;
+            this.txtNombre.TabIndex = 2;
             // 
             // label1
             // 
@@ -113,7 +113,7 @@
             this.txtDni.Location = new System.Drawing.Point(194, 22);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(152, 26);
-            this.txtDni.TabIndex = 6;
+            this.txtDni.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -199,7 +199,7 @@
             this.txtEdad.Location = new System.Drawing.Point(417, 22);
             this.txtEdad.Name = "txtEdad";
             this.txtEdad.Size = new System.Drawing.Size(53, 26);
-            this.txtEdad.TabIndex = 7;
+            this.txtEdad.TabIndex = 1;
             // 
             // label5
             // 

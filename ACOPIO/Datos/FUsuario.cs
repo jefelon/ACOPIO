@@ -39,17 +39,27 @@ namespace ACOPIO.Datos
             return Convert.ToInt32(SQLiteHelper.ExecuteScalar("insert into tblUsuario(Nombre) values(@Nombre); select last_insert_rowid();", dbParams));
         }
 
-        public static int Actualizar(Usuario usuario)
+        public static int ActualizarNombreUsuario(int id, string nombreUsuario)
         {
             SQLiteParameter[] dbParams = new SQLiteParameter[]
                 {
-                    //SQLiteHelper.MakeParam("@Id", DbType.Int32, 0, usuario.Id),
-                    // SQLiteHelper.MakeParam("@Nombre", DbType.String, 0, usuario.Nombre),
+                    SQLiteHelper.MakeParam("@Id", DbType.Int32, 0, id),
+                    SQLiteHelper.MakeParam("@NombreUsuario", DbType.String, 0, nombreUsuario),
                 };
-            return Convert.ToInt32(SQLiteHelper.ExecuteScalar("update tblUsuario set Nombre=@Nombre   WHERE Id=@Id", dbParams));
+            return Convert.ToInt32(SQLiteHelper.ExecuteScalar("update tblUsuario set NombreUsuario=@NombreUsuario   WHERE Id=@Id", dbParams));
 
         }
+        public static int ActualizarClaveUsuario(int id, string clave)
+        {
+            SQLiteParameter[] dbParams = new SQLiteParameter[]
+                {
+                    SQLiteHelper.MakeParam("@Id", DbType.Int32, 0, id),
+                    SQLiteHelper.MakeParam("@Clave", DbType.String, 0, clave),
+                };
+            return Convert.ToInt32(SQLiteHelper.ExecuteScalar("update tblUsuario set Contrasena=@Clave   WHERE Id=@Id", dbParams));
 
+        }
+        
         public static int Eliminar(Usuario usuario)
         {
             SQLiteParameter[] dbParams = new SQLiteParameter[]

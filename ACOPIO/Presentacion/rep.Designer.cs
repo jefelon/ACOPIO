@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsReporte = new ACOPIO.Presentacion.dsReporte();
             this.CategorizacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsReporte = new ACOPIO.Presentacion.dsReporte();
             this.CategorizacionTableAdapter = new ACOPIO.Presentacion.dsReporteTableAdapters.CategorizacionTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dsReporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategorizacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReporte)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -44,21 +44,21 @@
             reportDataSource1.Name = "dsReporte";
             reportDataSource1.Value = this.CategorizacionBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ACOPIO.Presentacion.Report1.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "ACOPIO.Presentacion.RptConsolidado.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.Size = new System.Drawing.Size(845, 468);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dsReporte
-            // 
-            this.dsReporte.DataSetName = "dsReporte";
-            this.dsReporte.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // CategorizacionBindingSource
             // 
             this.CategorizacionBindingSource.DataMember = "Categorizacion";
             this.CategorizacionBindingSource.DataSource = this.dsReporte;
+            // 
+            // dsReporte
+            // 
+            this.dsReporte.DataSetName = "dsReporte";
+            this.dsReporte.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // CategorizacionTableAdapter
             // 
@@ -73,8 +73,8 @@
             this.Name = "rep";
             this.Text = "rep";
             this.Load += new System.EventHandler(this.rep_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsReporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CategorizacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsReporte)).EndInit();
             this.ResumeLayout(false);
 
         }

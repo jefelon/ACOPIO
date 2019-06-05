@@ -18,13 +18,6 @@ namespace ACOPIO.Presentacion
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            FrmColor color = new FrmColor();
-            color.ShowDialog();
-            FrmColores_Load(null,null);
-        }
-
         private void FrmColores_Load(object sender, EventArgs e)
         {
             try
@@ -37,6 +30,13 @@ namespace ACOPIO.Presentacion
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FrmColor color = new FrmColor();
+            color.ShowDialog();
+            FrmColores_Load(null, null);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -93,7 +93,7 @@ namespace ACOPIO.Presentacion
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Excel Documents (*.xls)|*.xls";
-            sfd.FileName = "Listado.xls";
+            sfd.FileName = "Colores.xls";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 ExportarDataGridViewExcel(dgvDatos, sfd.FileName);

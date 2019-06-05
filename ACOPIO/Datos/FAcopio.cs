@@ -17,7 +17,7 @@ namespace ACOPIO.Datos
                 {
 
                 };
-            return SQLiteHelper.ExecuteDataSet("select * from tblAcopio order by id; ", dbParams);
+            return SQLiteHelper.ExecuteDataSet("SELECT        tblAcopio.Id, tblAcopio.Fecha, tblCentroAcopio.Nombre AS CentroAcopio, tblCampania.Nombre AS Campania, tblProductor.Dni, tblProductor.Nombre FROM            tblAcopio INNER JOIN tblProductor ON tblAcopio.ProductorId = tblProductor.Id INNER JOIN tblCampania ON tblAcopio.CampaniaId = tblCampania.Id INNER JOIN tblCentroAcopio ON tblAcopio.CentroAcopioId = tblCentroAcopio.Id ORDER BY tblAcopio.Id; ", dbParams);
 
         }
         public static int Insertar(Acopio acopio)

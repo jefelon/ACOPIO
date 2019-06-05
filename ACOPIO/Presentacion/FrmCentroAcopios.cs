@@ -81,7 +81,7 @@ namespace ACOPIO.Presentacion
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Excel Documents (*.xls)|*.xls";
-            sfd.FileName = "Listado.xls";
+            sfd.FileName = "Centro-Acopios.xls";
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 ExportarDataGridViewExcel(dgvDatos, sfd.FileName);

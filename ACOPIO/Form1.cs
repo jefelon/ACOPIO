@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using ACOPIO.Presentacion;
 using System.Data.SQLite;
 using System.IO;
+using System.Configuration;
 
 namespace ACOPIO
 {
@@ -109,8 +110,8 @@ namespace ACOPIO
 
         private void reimpresiónDeReporteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmImpresionAcopio frm = new FrmImpresionAcopio();
-            frm.AcopioId = 5;
+            FrmAcopioListado frm = new FrmAcopioListado();
+
             frm.Show();
         }
 
@@ -124,6 +125,57 @@ namespace ACOPIO
         {
             RptAcopioFechasProveedor frm = new RptAcopioFechasProveedor();
             frm.Show();
+        }
+
+        private void aparienciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmApariencia frm = new FrmApariencia();
+            frm.ShowDialog();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void campañasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCampanias frm = new FrmCampanias();
+            frm.ShowDialog();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            string fondo;
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            fondo=config.AppSettings.Settings["fondo"].Value;
+
+            if(File.Exists(fondo)){
+                 this.BackgroundImageLayout = ImageLayout.Stretch;
+                 this.BackgroundImage = Image.FromFile(fondo);
+            }
+        }
+
+        private void acercaDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUsuario form = new FrmUsuario();
+            form.Show();
+        }
+
+        private void usuariosListadoDeUsuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void unidadProductivaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmUnidadProductivas form = new FrmUnidadProductivas();
+            form.Show();
         }
     }
 }
